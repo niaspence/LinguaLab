@@ -21,6 +21,7 @@ export default function LinguaLab() {
     { id: 'tools', label: 'Tools & Apps', icon: '🛠️' },
     { id: 'myths', label: 'Myth Busting', icon: '✨' },
     { id: 'quiz', label: 'Assessment Quiz', icon: '📝' },
+    { id: 'alphabets', label: 'Writing Systems', icon: '✍️' },
     { id: 'languageofmonth', label: 'Language of Month', icon: '🌟' },
     { id: 'languages', label: 'World Languages', icon: '🌍' },
     { id: 'countrysearch', label: 'Languages by Country', icon: '🔍' },
@@ -112,6 +113,93 @@ export default function LinguaLab() {
     ]
   };
 
+  const writingSystems = [
+    {
+      name: 'Korean - Hangul',
+      script: 'ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ',
+      description: 'Created in 1443, one of the most systematic writing systems. Each letter represents a specific sound. Consonants and vowels are combined to form syllables.',
+      example: '안녕하세요 (Hello)',
+      fullAlphabet: 'Consonants: ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅄ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ | Vowels: ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅢ ㅞ ㅝ ㅤ ㅥ ㅦ ㅧ ㅨ ㅩ ㅪ ㅫ ㅬ ㅭ ㅮ ㅯ'
+    },
+    {
+      name: 'Japanese - Hiragana',
+      script: 'あ い う え お か き く け こ',
+      description: 'Phonetic script used for native Japanese words and grammar.',
+      example: 'ひらがな (Hiragana)',
+      fullAlphabet: 'あ い う え お か き く け こ さ し す せ そ た ち つ て と な に ぬ ね の は ひ ふ へ ほ ま み む め も や ゆ よ ら り る れ ろ わ を ん'
+    },
+    {
+      name: 'Japanese - Katakana',
+      script: 'ア イ ウ エ オ カ キ ク ケ コ',
+      description: 'Phonetic script used for foreign words and emphasis.',
+      example: 'カタカナ (Katakana)',
+      fullAlphabet: 'ア イ ウ エ オ カ キ ク ケ コ サ シ ス セ ソ タ チ ツ テ ト ナ ニ ヌ ネ ノ ハ ヒ フ ヘ ホ マ ミ ム メ モ ヤ ユ ヨ ラ リ ル レ ロ ワ ヲ ン'
+    },
+    {
+      name: 'Chinese - Simplified Hanzi',
+      script: '中 文 汉 字 我 爱 你',
+      description: 'Logographic system where each character represents a word or concept. Simplified version used in mainland China.',
+      example: '你好 (Hello)',
+      fullAlphabet: 'Basic characters: 人 大 小 火 水 木 土 金 中 国 日 月 星 天 地 年 月 日 时 分 秒'
+    },
+    {
+      name: 'Russian - Cyrillic',
+      script: 'А Б В Г Д Е Ё Ж З И',
+      description: 'Alphabetic script used for Russian and other Slavic languages.',
+      example: 'Привет (Hello)',
+      fullAlphabet: 'А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я'
+    },
+    {
+      name: 'Arabic - Arabic Script',
+      script: 'ا ب ت ث ج ح خ د ذ ر',
+      description: 'Written from right to left. Letters connect to each other and change form based on position.',
+      example: 'مرحبا (Hello)',
+      fullAlphabet: 'ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي'
+    },
+    {
+      name: 'Hindi - Devanagari',
+      script: 'अ आ इ ई उ ऊ ऋ ए ऐ',
+      description: 'Abugida script where consonants have an inherent vowel. Vowels can be modified with diacritical marks.',
+      example: 'नमस्ते (Hello)',
+      fullAlphabet: 'क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह'
+    },
+    {
+      name: 'Thai - Thai Script',
+      script: 'ก ข ค ง จ ฉ ช ซ ญ ด',
+      description: 'Abugida script written left to right. No spaces between words; tone marks are used.',
+      example: 'สวัสดี (Hello)',
+      fullAlphabet: 'ก ข ค ง จ ฉ ช ซ ญ ด ฎ ต ถ ท ธ น บ ป ผ ฝ พ ฟ ม ย ร ล ว ศ ษ ส ห ฬ'
+    },
+    {
+      name: 'Greek - Greek Script',
+      script: 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ',
+      description: 'One of the oldest alphabetic systems. Used for Greek language and in scientific notation.',
+      example: 'Γεία σας (Hello)',
+      fullAlphabet: 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω'
+    },
+    {
+      name: 'Hebrew - Hebrew Script',
+      script: 'א ב ג ד ה ו ז ח ט י',
+      description: 'Written from right to left. Historically did not include vowels; modern Hebrew uses vowel marks.',
+      example: 'שלום (Hello)',
+      fullAlphabet: 'א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת'
+    },
+    {
+      name: 'Latin - English Alphabet',
+      script: 'A B C D E F G H I J',
+      description: 'Used for English, Spanish, French, and many other languages.',
+      example: 'Hello',
+      fullAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
+    },
+    {
+      name: 'Bengali - Bengali Script',
+      script: 'অ আ ই ঈ উ ঊ ঋ এ ঐ',
+      description: 'Abugida script used for Bengali language. Letters have inherent vowel sounds.',
+      example: 'নমস্কার (Hello)',
+      fullAlphabet: 'ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন প ফ ব ভ ম য র ল'
+    }
+  ];
+
   const handleCountrySearch = async (e) => {
     const search = e.target.value.trim();
     setCountrySearch(search);
@@ -122,14 +210,74 @@ export default function LinguaLab() {
         const response = await fetch(`https://restcountries.com/v3.1/name/${search}`);
         if (response.ok) {
           const data = await response.json();
-          const formattedResults = data.map(country => ({
-            country: country.name.common,
-            languages: country.languages ? Object.values(country.languages) : ['No language data'],
-            flag: country.flag || '🌍',
-            capital: country.capital ? country.capital[0] : 'N/A',
-            region: country.region || 'N/A',
-            population: country.population ? country.population.toLocaleString() : 'N/A'
-          }));
+          const formattedResults = data.map(country => {
+            // Get writing systems from the languages
+            const languages = country.languages ? Object.values(country.languages) : ['No language data'];
+            const writingSystems = country.languages ? Object.keys(country.languages).map(code => {
+              // Map common language codes to their writing systems
+              const writingMap = {
+                'spa': 'Latin Script',
+                'fra': 'Latin Script',
+                'deu': 'Latin Script',
+                'jpn': 'Hiragana, Katakana, Kanji',
+                'zho': 'Chinese Characters (Hanzi)',
+                'ara': 'Arabic Script',
+                'rus': 'Cyrillic Script',
+                'heb': 'Hebrew Script',
+                'kor': 'Hangul',
+                'tha': 'Thai Script',
+                'hind': 'Devanagari',
+                'ben': 'Bengali Script',
+                'tam': 'Tamil Script',
+                'tel': 'Telugu Script',
+                'ell': 'Greek Script',
+                'tur': 'Latin Script',
+                'pol': 'Latin Script',
+                'nld': 'Latin Script',
+                'swe': 'Latin Script',
+                'nor': 'Latin Script',
+                'dan': 'Latin Script',
+                'fin': 'Latin Script',
+                'ces': 'Latin Script',
+                'hun': 'Latin Script',
+                'ron': 'Latin Script',
+                'urd': 'Urdu Script',
+                'per': 'Persian Script',
+                'kat': 'Georgian Script',
+                'aze': 'Latin Script',
+                'kaz': 'Cyrillic Script',
+                'uzb': 'Latin Script',
+                'ckb': 'Arabic Script (Kurdish)',
+                'mya': 'Burmese Script',
+                'lao': 'Lao Script',
+                'khm': 'Khmer Script',
+                'sin': 'Sinhala Script',
+                'mal': 'Malayalam Script',
+                'kan': 'Kannada Script',
+                'ori': 'Odia Script',
+                'pan': 'Gurmukhi',
+                'guj': 'Gujarati Script',
+                'mar': 'Marathi Script',
+                'hin': 'Devanagari',
+                'vie': 'Latin Script (Vietnamese)',
+                'ind': 'Latin Script',
+                'msa': 'Latin Script',
+                'fil': 'Latin Script',
+                'tgl': 'Latin Script'
+              };
+              return writingMap[code] || 'Latin Script';
+            }) : ['Unknown'];
+            
+            return {
+              country: country.name.common,
+              languages: languages,
+              writingSystems: [...new Set(writingSystems)], // Remove duplicates
+              flag: country.flag || '🌍',
+              capital: country.capital ? country.capital[0] : 'N/A',
+              region: country.region || 'N/A',
+              population: country.population ? country.population.toLocaleString() : 'N/A'
+            };
+          });
           setSearchResults(formattedResults);
         } else {
           setSearchResults([]);
@@ -315,6 +463,67 @@ export default function LinguaLab() {
         );
 
       case 'quiz':
+        const quizQuestionsData = [
+          { id: 1, question: 'How much do you understand when listening?', options: [
+            { text: 'Nothing', level: 'Beginner' },
+            { text: 'Some words', level: 'Beginner-Intermediate' },
+            { text: 'Most of it', level: 'Intermediate' },
+            { text: 'Nearly everything', level: 'Advanced' },
+            { text: 'Everything including jokes', level: 'Fluent' }
+          ]},
+          { id: 2, question: 'Can you have a conversation?', options: [
+            { text: 'No', level: 'Beginner' },
+            { text: 'Simple phrases', level: 'Beginner-Intermediate' },
+            { text: 'Yes, with mistakes', level: 'Intermediate' },
+            { text: 'Yes, fluently', level: 'Advanced' },
+            { text: 'Yes, complex topics', level: 'Fluent' }
+          ]},
+          { id: 3, question: 'How much can you read?', options: [
+            { text: 'Almost nothing', level: 'Beginner' },
+            { text: 'Simple texts', level: 'Beginner-Intermediate' },
+            { text: 'News articles', level: 'Intermediate' },
+            { text: 'Most books', level: 'Advanced' },
+            { text: 'Everything', level: 'Fluent' }
+          ]},
+          { id: 4, question: 'Study time?', options: [
+            { text: 'Less than 3 months', level: 'Beginner' },
+            { text: '3-6 months', level: 'Beginner-Intermediate' },
+            { text: '6 months - 2 years', level: 'Intermediate' },
+            { text: '2-5 years', level: 'Advanced' },
+            { text: '5+ years', level: 'Fluent' }
+          ]}
+        ];
+
+        return (
+          <div className="space-y-8">
+            <h2 className="text-4xl font-bold">Assessment Quiz</h2>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 border border-white/20">
+              {!quizSubmitted ? (
+                <div className="space-y-8">
+                  {quizQuestionsData.map((q, idx) => (
+                    <div key={q.id} className="pb-6 border-b border-white/20 last:border-b-0">
+                      <h3 className="text-lg font-bold text-pink-300 mb-4">{idx + 1}. {q.question}</h3>
+                      {q.options.map((opt, optIdx) => (
+                        <label key={optIdx} className="flex items-center gap-3 cursor-pointer hover:bg-white/10 p-3 rounded mb-2">
+                          <input type="radio" name={`q${q.id}`} checked={quizAnswers[q.id] === opt.level} onChange={() => handleQuizAnswer(q.id, opt.level)} />
+                          <span className="text-purple-100">{opt.text}</span>
+                        </label>
+                      ))}
+                    </div>
+                  ))}
+                  <button onClick={() => setQuizSubmitted(true)} disabled={Object.keys(quizAnswers).length < 4} className="w-full px-6 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-bold disabled:opacity-50">Get Results</button>
+                </div>
+              ) : (
+                <div className="space-y-6 text-center">
+                  <h3 className="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">Your Level: {getQuizResult()}</h3>
+                  <button onClick={() => { setQuizAnswers({}); setQuizSubmitted(false); }} className="px-8 py-3 bg-white/20 rounded-full font-semibold">Retake Quiz</button>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+
+      case 'quiz':
         const quizQuestions = [
           { id: 1, question: 'How much do you understand when listening?', options: [
             { text: 'Nothing', level: 'Beginner' },
@@ -371,6 +580,36 @@ export default function LinguaLab() {
                   <button onClick={() => { setQuizAnswers({}); setQuizSubmitted(false); }} className="px-8 py-3 bg-white/20 rounded-full font-semibold">Retake Quiz</button>
                 </div>
               )}
+            </div>
+          </div>
+        );
+
+      case 'alphabets':
+        return (
+          <div className="space-y-8">
+            <h2 className="text-4xl font-bold mb-8">Writing Systems & Alphabets</h2>
+            <p className="text-xl text-purple-200 mb-8">Explore the alphabets and writing systems of world languages</p>
+            <div className="space-y-8">
+              {writingSystems.map((system, idx) => (
+                <div key={idx} className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-pink-400 mb-2">{system.name}</h3>
+                    <p className="text-purple-300 mb-4">{system.description}</p>
+                  </div>
+                  
+                  <div className="bg-white/5 rounded-lg p-6 mb-4">
+                    <p className="text-purple-300 font-semibold text-sm mb-2">Sample Characters:</p>
+                    <p className="text-4xl text-center text-pink-300 mb-4">{system.script}</p>
+                    <p className="text-purple-300 font-semibold text-sm mb-2">Example:</p>
+                    <p className="text-2xl text-blue-300 mb-4">{system.example}</p>
+                  </div>
+
+                  <div className="bg-white/5 rounded-lg p-6">
+                    <p className="text-purple-300 font-semibold text-sm mb-2">Full Alphabet:</p>
+                    <p className="text-xl text-purple-100 leading-relaxed">{system.fullAlphabet}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         );
@@ -466,10 +705,18 @@ export default function LinguaLab() {
 
                     <div>
                       <p className="text-purple-400 font-semibold mb-3">Languages:</p>
-                      <div className="flex flex-wrap gap-3">
+                      <div className="flex flex-wrap gap-3 mb-6">
                         {result.languages.map((lang, langIdx) => (
                           <span key={langIdx} className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded-full text-white font-semibold text-sm">
                             {lang}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-purple-400 font-semibold mb-3">Writing Systems:</p>
+                      <div className="flex flex-wrap gap-3">
+                        {result.writingSystems.map((system, sysIdx) => (
+                          <span key={sysIdx} className="bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-2 rounded-full text-white font-semibold text-sm">
+                            {system}
                           </span>
                         ))}
                       </div>
